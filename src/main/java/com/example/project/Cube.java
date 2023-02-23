@@ -19,6 +19,36 @@ public class Cube {
         {"7","8","9"}
     };
 
+    // static String[][] cube2 = {
+    //     {"r","r","r",
+    //      "r","r","r",
+    //      "r","r","r"},
+
+    //     {"b","b","b",
+    //      "b","b","b",
+    //      "b","b","b"},
+
+    //     {"g","g","g",
+    //      "g","g","g",
+    //      "g","g","g"},
+
+    //     {"r","r","r",
+    //      "r","r","r",
+    //      "r","r","r"},
+
+    //     {"r","r","r",
+    //      "r","r","r",
+    //      "r","r","r"},
+
+    //     {"r","r","r",
+    //      "r","r","r",
+    //      "r","r","r"},
+
+    //     {"r","r","r",
+    //      "r","r","r",
+    //      "r","r","r"},
+    // }
+
     static String[][][] cube = {
         {
             {"1r","2r","3r"},
@@ -56,11 +86,17 @@ public class Cube {
         switch(input.toLowerCase()){
             case "u":
                     solutionStack.add("u'");
+
+                rotateFace(cube[5], true);
+                rotateedge()
+                show(face);
                 //Code Block
                 break;
             
 			case "d":
                     solutionStack.add("d'");
+
+                    
 				//Code Block
 				break;
 			
@@ -85,7 +121,9 @@ public class Cube {
 				break;
 		
 			case "u'":
-
+                move(Cube,"u");
+                move(Cube,"u");
+                move(Cube,"u");
                 //Code Block
                 break;
            
@@ -131,6 +169,9 @@ public class Cube {
         }
     }
 
+    static void rotateEdge(int[] edg1, int[] edg2, int[] edg3, int[] edg4){
+
+    }
 
     static void rotateFace(String[][] Face, boolean clockwise){
 
@@ -167,6 +208,9 @@ public class Cube {
             //Face[2][2] = tempFace[2][0];
         }
         else{
+                rotateFace(Face, false);
+                rotateFace(Face, false);
+                rotateFace(Face, false);
 
         }
 
@@ -182,6 +226,7 @@ public class Cube {
             // }
             // solve();
         rotateFace(face, true);
+        rotateedge
         show(face);
     }
 }
