@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//Pretty good start but was missing some functionality
+
 public class Cube {
 
     static boolean proceed = true;
